@@ -2,16 +2,16 @@
 from flask import Flask, render_template, jsonify, redirect
 import pymongo
 from pymongo import MongoClient
-# from mLabCredentials import username, password
+from mLabCredentials import username, password
 import scrape_mars
 
 # Flask setup
 app = Flask(__name__)
 
-# client = MongoClient("mongodb://%s:%s@ds143245.mlab.com:43245/heroku_n5qzr3nx" % (username, password))
+conn = "mongodb://rc:C00k1eBaba@ds143245.mlab.com:43245/heroku_n5qzr3nx"
 # client = MongoClient("mongodb://localhost:27017")
 
-conn = 'mongodb://localhost:27017'
+# conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 
 db = client.mars_db
