@@ -2,7 +2,6 @@
 from flask import Flask, render_template, jsonify, redirect
 import pymongo
 from pymongo import MongoClient
-from mLabCredentials import username, password
 import scrape_mars
 
 # Flask setup
