@@ -13,8 +13,8 @@ conn = "mongodb://rc:C00k1eBaba@ds143245.mlab.com:43245/heroku_n5qzr3nx"
 # conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 
-db = client.mars_db
-# db = client.heroku_n5qzr3nx
+# db = client.mars_db
+db = client.heroku_n5qzr3nx
 
 collection = db.mars
 
@@ -37,4 +37,5 @@ def scrape():
 
 if __name__ == "__main__":
     app.run(debug=True)
-# 
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
