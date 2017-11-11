@@ -12,5 +12,7 @@ Werkzeug==0.12.2
 pymongo==3.5.1
 beautifulsoup4==4.6.0
 pandas==0.20.1
+requests==2.14.2
+
 
 
