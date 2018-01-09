@@ -26,7 +26,7 @@ def init_browser():
 # Define a function 
 def scrape():
     browser = init_browser()
-    # create mars_data dict that we can insert into mongo
+    # create mars dict that we can insert into mongo
     mars = {}
 
     #############################################
