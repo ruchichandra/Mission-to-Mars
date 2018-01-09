@@ -183,7 +183,7 @@ def scrape():
         # Append hemisphere object to list
         hemisphere_image_urls.append(hemisphere)
         
-        # Finally, we navigate backwards
+        # navigate backwards
         browser.back()
         time.sleep(1)
 
