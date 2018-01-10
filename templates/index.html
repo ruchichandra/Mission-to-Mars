@@ -28,7 +28,7 @@
         <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Latest Mars News</h3>
+                <h2>Latest Mars News</h2>
                 <hr>
                 <h4>{{mars.news_title}}</h5>
                 <p>{{mars.news_p}}</p>
@@ -44,7 +44,7 @@
         <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>Featured Mars Image</h3>
+                    <h2>Featured Mars Image</h2>
                     <hr>
                     <img src ="{{mars.featured_image_url}}" alt="Featured Mars Image" style="width: 100%">
                 </div>
@@ -57,7 +57,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3>Current Weather on Mars</h3>
+                            <h2>Current Weather on Mars</h2>
                             <hr>
                             <p>{{mars.mars_weather}}</p>
                         </div>
@@ -69,9 +69,9 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3>Mars Facts</h3>
+                            <h2>Mars Facts</h2>
                             <hr>
-                            <p>{{mars.table}}</p>
+                            <p>{{mars.facts | safe}}</p>
                         </div>
                     </div>
                 </div>
@@ -85,20 +85,26 @@
         <div class="page-header">
           <h2 class="text-center">Mars Hemispheres</h2>
         </div>
-  
-  
-        {% for hemisphere in mars.hemispheres %}
-          <div class="col-md-6">
-              <div class="thumbnail">
-              <img src="{{hemisphere.imgage_url}}"
-                  alt="...">
-              <div class="caption">
-                  <h3>{{hemisphere.title}}</h3>
-              </div>
-              </div>
-          </div>
-        {% endfor %}
-  
+
+        <div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">						
+						<div class="panel-body">
+							{% for hemisphere in mars.hemispheres %}
+                                <div class="col-md-6">
+                                    <div class="thumbnail">
+                                    <img src="{{hemisphere.imgage_url}}"
+                                        alt="...">
+                                    <div class="caption">
+                                        <h2>{{hemisphere.title}}</h2>
+                                    </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+						</div>
+					</div>
+			</div>
+		</div>   
       </div>
   
     </div>

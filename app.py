@@ -33,8 +33,7 @@ def scrape():
     mars.update({}, data, upsert=True)
 
     return redirect("http://localhost:5000/", code=302)
-
-
+   
 if __name__ == "__main__":
     app.run(debug=True)
     app.jinja_env.auto_reload = True
